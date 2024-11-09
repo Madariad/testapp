@@ -1,0 +1,628 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+   
+
+    color: white;
+}
+body{
+
+    color: white;
+}
+h1{
+    margin: 0px;
+}
+.bg{
+    padding: 0px 10px 0px 10px;
+    background-color: #151950;
+
+    height: auto;
+
+    
+}
+
+.btn-logout{
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    background-color: rgb(196, 16, 16);
+
+    cursor: pointer;
+    
+}
+.navbar{
+    background-color: rgb(255 255 255 / 20%);
+    backdrop-filter: blur(80px);
+
+    position: fixed;
+    top: 10px;
+
+    left: 10px;
+    right: 10px;
+
+    z-index: 999;
+
+    max-width: 1190px;
+
+    border-radius: 10px;
+
+    margin: 0 auto;
+
+    padding: 10px;
+    
+
+    color: aquamarine;
+
+    font-style: italic;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+    }
+
+    .navbar-content{
+        display: flex;
+
+        // justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-brand{
+        padding: 10px 20px;
+    }
+
+    .navbar-btn-groups{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        margin-left: auto;
+    }
+
+
+
+    
+}
+.container{
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0px 10px 0px 10px;
+    
+}
+.auth{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        text-align: center;
+        // margin: 20px 0 20px 0;
+    }
+
+        
+        .auth-block{
+        
+            background-color: rgb(26, 207, 19);
+        
+            box-shadow: -5px 5px 150px rgb(26, 207, 19) ;
+        
+            color: white;
+            
+        
+            max-width: 400px;
+            
+        
+            margin: 0 auto;
+            padding: 0px 20px 10px 20px;
+        
+            border: 3px solid black;
+        
+            border-radius: 10px;
+        
+            h2{
+                text-align: center;
+        
+                padding: 20px;
+                
+            }
+        
+            form{
+                width: 100%;
+        
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        
+                gap: 20px;
+            }
+        
+            input{
+                padding: 10px;
+                border-radius: 10px;
+                border: 2px solid skyblue;
+        
+                &:focus{
+                    outline: 2px solid rgb(0, 140, 255);
+        
+                }
+            }
+        
+            .btn{
+                padding: 10px 20px 10px 20px;
+                cursor: pointer;
+            
+                border-radius: 10px;
+            
+                background-color: rgb(36, 36, 133);
+        
+                color: white;
+            }
+        }
+}
+
+
+
+.navbar-brand{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+
+// hero
+.hero {
+    width: 100%;
+    padding-bottom: 80px;
+    padding-top: 100px;
+
+    .hero-content {
+        width: 60%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right"; /* Изначально - два блока в ряд */
+    }
+
+    .hero-content-left {
+        border-right: 3px solid salmon;
+        grid-area: left;
+    }
+
+    .hero-content-right {
+        padding: 0 10px 0 20px;
+        grid-area: right;
+
+        .btn {
+            padding: 10px 20px;
+            background-color: sandybrown;
+            border-radius: 10px;
+            border: 2px solid rgb(25, 184, 11);
+            cursor: pointer;
+        }
+
+        .hero-input {
+            padding: 10px;
+            border: 2px solid darkmagenta;
+            border-radius: 5px;
+        }
+
+        .hero-form-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+    }
+
+    /* Адаптация для экранов шириной до 768px (планшеты и мобильные устройства) */
+    @media screen and (max-width: 300px) {
+        .hero-content {
+            width: 80%;
+            grid-template-columns: 1fr; /* Одноколоночный вид */
+            grid-template-areas: 
+                "left"
+                "right"; /* Сначала правый, затем левый блок */
+        }
+
+        /* Убираем правую границу у левого блока */
+        .hero-content-left {
+            border-right: none;
+            margin-top: 20px; /* Отступ сверху, чтобы разделить блоки */
+        }
+    }
+
+    /* Адаптация для маленьких экранов шириной до 384px */
+    @media screen and (max-width: 384px) {
+        .hero-content {
+            width: 100%;
+        }
+        .hero-content-right {
+            padding: 0;
+        }
+    }
+}
+
+
+
+
+.list-groups{
+    background-color: #151950;
+
+    width: 100%;
+
+    min-height: 650px;
+
+    border-top: 2px solid rgb(38, 21, 138);
+    // backdrop-filter: blur(40px);
+
+    // box-shadow: 0px 0px 50px 10px rgb(15, 163, 138);
+
+    position: relative;
+
+    .dec-sirc{
+        // clip-path: circle(80px);
+
+        // background-color: rgba(240, 248, 255, 0.192);
+
+        position: absolute;
+        top: 89px;
+        left: -80px;
+
+        width: 15px;
+        height: 255px;
+
+        box-shadow: 10px 10px 800px 30px aliceblue;
+        border-radius: 100px;
+        // backdrop-filter: blur(10px);
+        // background: transparent;
+    }
+
+}
+
+
+// taecher
+
+.teacher-section{
+    // height: 300px;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+
+    .teacher-section-content {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        // Адаптивный вид для мобильных устройств
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .teacher-section-group{
+            flex: 1;
+        }
+    }
+
+    .teacher-section-create {
+
+
+        .teacher-section-create-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input[type="text"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    border-color: #007bff;
+                    outline: none;
+                }
+            }
+
+            #groupCode{
+                color: #000000;
+
+                cursor:text;
+            }
+
+            .btn-generate {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #218838;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .btn-submit {
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #0056b3;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .teacher-section-group {
+        padding: 20px;
+        text-align: center;
+   
+    
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    
+        .groups-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    
+        .group-card {
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.2s;
+            cursor: pointer;
+            
+            &:hover {
+                transform: translateY(-5px);
+            }
+    
+            .group-name {
+                font-size: 1.5rem;
+                color: #007bff;
+                margin-bottom: 10px;
+            }
+    
+            .group-description {
+                font-size: 1rem;
+                color: #555;
+                margin-bottom: 10px;
+            }
+    
+            .group-code {
+                font-size: 0.9rem;
+                color: #333;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+    
+            .group-status {
+                font-size: 0.9rem;
+                color: #333;
+                
+                .active {
+                    color: #28a745; // Зеленый цвет для активного статуса
+                }
+                
+                .inactive {
+                    color: #dc3545; // Красный цвет для неактивного статуса
+                }
+            }
+        }
+    
+        .no-groups {
+            font-size: 1.2rem;
+            color: #888;
+            grid-column: 1 / -1;
+        }
+    }
+    
+}
+
+
+
+// module
+
+
+.module{
+    padding-top: 100px;
+    height: 600px;
+}
+
+// userGroups
+
+// .userGroups{
+//     padding-top: 100px;
+//     height: 100vh;
+// }
+
+// Container customization
+.userGroups {
+    padding-top: 100px;
+    height: 100vh;
+    // cursor: pointer;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h2{
+            margin-bottom: 20px;
+        }
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        margin-bottom: 30px;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            padding: 0.75rem 1rem;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            border-radius: 8px 8px 0 0;
+
+            .card-title {
+                margin: 0;
+                font-size: 1.25rem;
+                color: #333;
+                font-weight: bold;
+            }
+        }
+
+        .card-body {
+            padding: 1rem;
+            .card-text {
+                font-size: 1rem;
+                color: #555;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .userGroups {
+        .card {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+.module {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    // background: linear-gradient(135deg, #e0f7fa, #80deea);
+    padding: 2rem;
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .module-form {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        .form-title {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    margin-bottom: 0.5rem;
+                    font-weight: 600;
+                }
+
+                input {
+                    padding: 0.75rem;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    transition: border-color 0.3s;
+
+                    &:focus {
+                        border-color: #009688;
+                        outline: none;
+                    }
+                }
+            }
+
+            .submit-btn {
+                padding: 0.75rem 1.5rem;
+                background-color: #009688;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #00796b;
+                }
+            }
+        }
+    }
+
+    .module-item {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        font-size: 1rem;
+    }
+
+    .no-modules {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        color: #666;
+    }
+}
+
+  
